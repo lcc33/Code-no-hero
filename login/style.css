@@ -1,0 +1,173 @@
+:root {
+  --neon-blue: #00eaff;
+  --neon-pink: #ff00c8;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(0, 255, 255, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  background: linear-gradient(120deg, #0a0a0a, #000011);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--neon-blue),
+    var(--neon-pink) 20px,
+    transparent 40px
+  );
+  background-size: 400% 400%;
+  animation: pulseBackground 15s linear infinite;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+@keyframes pulseBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+.form-container, .confirmation-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border: 2px solid var(--border-glow);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  box-shadow: 0 0 40px var(--neon-blue);
+  max-width: 400px;
+  width: 90%;
+  animation: dropIn 1s ease-out forwards;
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.form-container:hover {
+  box-shadow: 0 0 80px var(--neon-blue);
+  transition: box-shadow 0.4s ease-in-out;
+}
+
+@keyframes dropIn {
+  from { transform: translateY(-100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, -50%); }
+}
+
+@keyframes dropIn {
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+input:focus {
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink);
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}
+
+input:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-pink));
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px var(--neon-pink);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--neon-blue), 0 0 50px var(--neon-pink);
+}
+
+.glow-bar {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  animation: moveGlow 3s infinite linear;
+  background-size: 200% 100%;
+}
+
+@keyframes moveGlow {
+  0% { background-position: 0 0; }
+  100% { background-position: 200% 0; }
+}
+
+.confirmation-card {
+  display: none;
+  text-align: center;
+  animation: neonFlash 1.5s infinite alternate;
+}
+
+.confirmation-card.show {
+  display: block;
+  animation: zoomIn 0.7s ease forwards;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes neonFlash {
+  from { box-shadow: 0 0 20px var(--neon-blue), 0 0 40px var(--neon-pink); }
+  to { box-shadow: 0 0 40px var(--neon-pink), 0 0 80px var(--neon-blue); }
+}

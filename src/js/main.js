@@ -1,16 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.getElementById("darkModeToggle");
-  toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-  });
-
-  const startBtn = document.getElementById("startButton");
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  const startButton = document.getElementById("startLink");
   const jutsuSound = document.getElementById("jutsuSound");
 
-  startBtn.addEventListener("click", () => {
-    jutsuSound.currentTime = 0;
-    jutsuSound.play().catch((e) => {
-      console.error("Audio play failed:", e);
-    });
+  
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+      darkModeToggle.textContent = "🌙 Dark Mode ";
+    } else {
+      darkModeToggle.textContent = "🌞 Light Mode";
+    }
   });
+
+  
+  if (startButton && jutsuSound && darkModeToggle) {
+    startButton &&
+      darkModeToggle.addEventListener("click", (e) => {
+        jutsuSound.currentTime = 0;
+        jutsuSound.play().catch((err) => {
+          console.error("Sound failed to play:", err);
+        });
+      });
+  }
 });
