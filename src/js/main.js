@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.toggle("dark");
 
     if (document.body.classList.contains("dark")) {
-      darkModeToggle.textContent = "🌙 Dark Mode ";
+      darkModeToggle.textContent = "🌙";
     } else {
-      darkModeToggle.textContent = "🌞 Light Mode";
+      darkModeToggle.textContent = "🌞";
     }
   });
 
