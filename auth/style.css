@@ -39,11 +39,6 @@ body::before {
   z-index: -1;
 }
 
-@keyframes pulseBackground {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-50%, -50%); }
-}
-
 .form-container, .confirmation-card {
   background: var(--glass-bg);
   backdrop-filter: blur(15px);
@@ -58,8 +53,7 @@ body::before {
   opacity: 0;
 }
 .form-container:hover {
-  box-shadow: 0 0 80px var(--neon-blue);
-  transition: box-shadow 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 @keyframes dropIn {
@@ -67,10 +61,6 @@ body::before {
   to { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes pulseBackground {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-50%, -50%); }
-}
 
 @keyframes dropIn {
   to { transform: translateY(0); opacity: 1; }

@@ -17,16 +17,44 @@
   </head>
   <body>
     <main class="lessons-container">
-      <h1 class="lesson-title">HTML Lessons</h1>
-      <article class="lesson-content">
+      <h1 class="lesson-title">
+        HTML Lessons
         <model-viewer
           class="object"
           src="../../../media/naruto.glb"
           alt="Naruto Hair"
-          auto-rotate
           camera-controls
         ></model-viewer>
+      </h1>
+      <article class="lesson-content">
+        <section class="flashcards" style="display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem;"></section>
+          <div class="flashcard">
+            <h2>What does HTML stand for?</h2>
+            <p>HyperText Markup Language</p>
+          </div>
+          <div class="flashcard">
+            <h2>What is the purpose of the &lt;head&gt; tag?</h2>
+            <p>It contains meta-information about the document, such as title and links to scripts and stylesheets.</p>
+          </div>
+          <div class="flashcard">
+            <h2>How do you create a hyperlink in HTML?</h2>
+            <p>Using the &lt;a&gt; tag: <code>&lt;a href="url"&gt;Link Text&lt;/a&gt;</code></p>
+          </div>
+          <div class="flashcard">
+            <h2>Which tag is used to display an image?</h2>
+            <p>&lt;img src="image.jpg" alt="Description"&gt;</p>
+          </div>
+          <div class="flashcard">
+            <h2>How do you create an unordered list?</h2>
+            <p>With &lt;ul&gt; for the list and &lt;li&gt; for each item.</p>
+          </div>
+          <div class="flashcard">
+            <h2>What is the function of the &lt;title&gt; tag?</h2>
+            <p>It sets the title of the web page shown in the browser tab.</p>
+          </div>
+        </section>
       </article>
     </main>
+   
   </body>
 </html>

@@ -96,23 +96,22 @@ body {
 
 #darkModeToggle {
   position: absolute;
-  content: "Light Mode";
   top: 1rem;
   right: 1rem;
   background: var(--text-color);
   color: var(--bg-color);
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 50%;
   cursor: pointer;
   font-size: 0.9rem;
-  box-shadow: 0 0 10px var(--accent);
   z-index: 1000;
   transition: all 0.3s ease-in-out;
 }
 
 #darkModeToggle:hover {
-  animation: float 5s ease infinite;
+  box-shadow: 0 0 10px var(--accent);
+
 }
 
 #darkModeToggle:active {
