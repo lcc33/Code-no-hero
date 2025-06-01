@@ -1,54 +1,65 @@
-# Code no Hero 🌐⚔️
+# ⚔️ Code no Hero — Web Dev Flashcard Cheat Sheet
 
-**Code no Hero** is an anime-themed website that teaches HTML, CSS, and JavaScript to beginners (especially teens). It makes learning web development fun and interactive by using characters, animations, and storytelling.
+**Code no Hero** is an open-source, beginner-friendly flashcard app that helps you quickly recall HTML, CSS, and JavaScript concepts. No login. No distractions. Just the essentials.
 
-## 🚀 Features
+> “Because even heroes forget syntax sometimes.” 🧠✨
 
-- 🧑‍💻 Beginner-friendly web development lessons
-- 🎨 Stylish anime-inspired UI
-- 🧠 Interactive code examples and output
-- 📱 Fully responsive design
-- 🌙 Dark mode support
+---
 
-## 🔧 Tech Stack
+## 🧩 Features
 
-- HTML5
-- CSS3 (no frameworks)
-- JavaScript (Vanilla)
-- [Model Viewer](https://modelviewer.dev/) for 3D models
+- 📚 Flashcard-style cheat sheets (HTML, CSS, JS)
+- 🧠 Simple, distraction-free UI
+- 🔓 100% open source
+- 💻 Mobile-friendly and responsive
+- 🔍 Searchable cards
 
-## 🧩 Project Structure
-
-Code-no-Hero/
-│
-├── index.html # Main landing page
-├── lessons/
-│ └── html.html # Example lesson page
-├── css/
-│ └── style.css # Core styles
-├── assets/
-│ ├── images/ # Backgrounds, icons, etc.
-│ └── models/ # 3D .glb character files
-└── js/
-└── script.js # Animation, interactivity
+---
 
 
-## 🗂️ Lesson Sample
+---
 
-```html
-<h1>Welcome to the Ninja Village</h1>
-<p>You are now a Genin web developer!</p>
+## 📂 Folder Structure
 
-🛠️ How to Use
+```bash
+code-no-hero/
+├── index.html           # Home page
+├── html.html            # HTML flashcards
+├── css.html             # CSS flashcards
+├── js.html              # JavaScript flashcards
+├── style.css            # Main styles
+├── flashcards.js        # Flashcard logic
+└── assets/              # Icons, images, etc.
+🛠️ How to Contribute
+🍴 Fork this repo
 
-    Clone the repo:
+📥 Clone it:
 
-    git clone https://github.com/yourusername/code-no-hero.git
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/code-no-hero.git
+🛠️ Make changes (add cards, improve UI, refactor)
 
-    Open index.html in your browser
+📤 Push & create a Pull Request
 
-    Start learning like a true web shinobi 🥷✨
+All contributions are welcome – from fixing typos to new features!
 
-💡 Inspiration
+💡 Ideas for Future
 
-Inspired by anime like Naruto, Code Geass, and My Hero Academia — making coding feel like leveling up your own hero journey.
+🎧 Audio hints
+
+🎮 Quiz mode
+
+🗃️ Categories/tags
+
+🌐 Multi-language support
+
+🙏 Credits
+Created with ❤️ by Your Name
+
+📜 License
+MIT License – do whatever you want, just give credit.
+
+🌟 If you like it...
+Give it a ⭐ on GitHub and share it with your dev friends!
